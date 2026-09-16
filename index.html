@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIM - Digital Inventory Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+        .hero { text-align: center; padding: 80px 20px 60px; background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%); }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
+        .hero .tagline { font-size: 1.3rem; color: #8b8ba3; margin-bottom: 8px; }
+        .hero .version { font-size: 0.9rem; color: #667eea; background: rgba(102,126,234,0.1); display: inline-block; padding: 6px 16px; border-radius: 20px; margin-bottom: 30px; }
+        .download-section { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+        .download-btn { padding: 16px 40px; border-radius: 12px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 10px; }
+        .download-btn.primary { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; }
+        .download-btn.primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(102,126,234,0.4); }
+        .download-btn.secondary { background: transparent; color: #667eea; border: 2px solid #667eea; }
+        .download-btn.secondary:hover { background: rgba(102,126,234,0.1); }
+        .features { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+        .features h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #fff; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .feature-card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 28px; transition: border-color 0.3s; }
+        .feature-card:hover { border-color: #667eea; }
+        .feature-icon { font-size: 2rem; margin-bottom: 12px; }
+        .feature-card h3 { color: #fff; margin-bottom: 8px; font-size: 1.1rem; }
+        .feature-card p { color: #8b8ba3; font-size: 0.95rem; line-height: 1.6; }
+        .screenshots { padding: 40px 20px; text-align: center; }
+        .screenshots h2 { font-size: 2rem; margin-bottom: 30px; color: #fff; }
+        .screenshot-container { max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; border: 1px solid #2a2a4a; }
+        .screenshot-container img { width: 100%; display: block; }
+        .footer { text-align: center; padding: 40px 20px; color: #5a5a7a; border-top: 1px solid #1a1a2e; margin-top: 40px; }
+        .footer a { color: #667eea; text-decoration: none; }
+        .requirements { max-width: 700px; margin: 0 auto 40px; background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 24px; }
+        .requirements h3 { color: #fff; margin-bottom: 12px; }
+        .requirements ul { list-style: none; padding: 0; }
+        .requirements li { color: #8b8ba3; padding: 6px 0; font-size: 0.95rem; }
+        .requirements li::before { content: '✓'; color: #667eea; margin-right: 10px; font-weight: bold; }
+        .stats { display: flex; justify-content: center; gap: 60px; margin: 40px 0; }
+        .stat { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-label { font-size: 0.9rem; color: #8b8ba3; margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>DIM</h1>
+        <p class="tagline">Digital Inventory Management System</p>
+        <span class="version">v2.4.0</span>
+        <div class="download-section">
+            <a href="releases/DIM-Setup-2.4.0.exe" download class="download-btn primary">
+                📥 Download Installer
+            </a>
+            <a href="https://github.com/Daniyalpardesi/dim-inventory/releases" target="_blank" class="download-btn secondary">
+                View All Releases
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Everything You Need</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Inventory Management</h3>
+                <p>Track products with barcodes, stock levels, supplier info, and real-time availability across multiple locations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧾</div>
+                <h3>Invoice & Sales</h3>
+                <p>Create professional invoices, track sales history, manage customers, and generate detailed PDF reports.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛒</div>
+                <h3>Purchase Tracking</h3>
+                <p>Record purchases, attach bills, track vendor payments, and manage your supply chain efficiently.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Monthly Payment Plans</h3>
+                <p>Set up installment payment plans with automatic schedule generation and payment tracking.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Smart Reminders</h3>
+                <p>Get automatic alerts for overdue payments, low stock, and upcoming installments.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3>Cloud Synced</h3>
+                <p>Data stored securely in the cloud with offline fallback support. Access anywhere, anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat">
+            <div class="stat-number">7</div>
+            <div class="stat-label">PDF Report Types</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Offline Access</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Free & Open Source</div>
+        </div>
+    </section>
+
+    <section class="requirements">
+        <h3>System Requirements</h3>
+        <ul>
+            <li>Windows 10 or later (64-bit)</li>
+            <li>4 GB RAM minimum</li>
+            <li>200 MB free disk space</li>
+            <li>Internet connection for cloud sync (offline mode available)</li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>DIM - Digital Inventory Management System &copy; 2026</p>
+        <p style="margin-top: 8px;">Built with FastAPI + Supabase | <a href="https://github.com/Daniyalpardesi/dim-inventory" target="_blank">Source Code</a></p>
+    </footer>
+</body>
+</html>
